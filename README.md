@@ -1,2 +1,2 @@
 # BU-CS-412
-Homeworks and projects done in CS412 
+Problem set 1
