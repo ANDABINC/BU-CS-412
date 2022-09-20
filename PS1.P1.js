@@ -41,7 +41,7 @@
 // let foo = "blah";
 // foo.split("").sort().reverse().join("")
 
-const rev_alpha = s => s.split("").sort().reverse().join("");
+
 // {
     // let s_hold = "";
     // let s_lower = s.toLowerCase();
@@ -60,5 +60,8 @@ const rev_alpha = s => s.split("").sort().reverse().join("");
     // s_hold= s_hold.join("");
     // return s_hold;
 // }
+
+const rev_alpha = s => s.split("").sort().reverse().join("");
+
 
 console.log('supercalifragilisticexpialidocious = ' + rev_alpha('supercalifragilisticexpialidocious'));
