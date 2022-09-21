@@ -1,31 +1,30 @@
 
 
 const eva = s =>{
-    let str = s.split("");
-    let left= str[0];
-    let op = str[1];
-    let right = str[2];
-    switch (op){
+    switch (s.split("")[1]){
         case '+':
-            return left + right;
+            return (left,right) => left + right;
             break;
         case '*':
-            return left* right;
+            return (left, right) => left*right; //(left, right) => left*right;
             break;
         case '-':
-            return  left - right;
+            return  (left, right) => left - right;
             break;
         case '^':
-            return left ** right;
+            return (left,right) => left**right;
             break;
         case '/':
-            return left / right;
+            return (left, right) => left/right;
             break;
     }
 }
 
+const parser = (eva, s)=>eva(s.split("")[0], s.split("")[2])
 
-const eval_str = s => eva(s)
+
+//do the call, eva(4+2)()
+// const eval_str = s => eva(s)
 
 const expression = '5*7';
-console.log(eval_str(expression));
+console.log(parser(eva(expression),expression));
