@@ -1,7 +1,7 @@
 
 
-const eva = s =>{
-    switch (s.split("")[1]){
+const eva = str =>{
+    switch (str[1]){
         case '+':
             return (left,right) => left + right;
             break;
@@ -20,7 +20,7 @@ const eva = s =>{
     }
 }
 
-const parser = (eva, s)=>eva(s.split("")[0], s.split("")[2])
+const parser = (eva, str)=>eva(str[0], str[2])
 
 
 //do the call, eva(4+2)()

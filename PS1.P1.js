@@ -61,7 +61,7 @@
     // return s_hold;
 // }
 
-const rev_alpha = s => s.split("").sort().reverse().join("");
+const rev_alpha = str => str.split("").sort().reverse().join("");
 
 
 console.log('supercalifragilisticexpialidocious = ' + rev_alpha('supercalifragilisticexpialidocious'));

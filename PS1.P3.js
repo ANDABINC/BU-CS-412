@@ -36,18 +36,18 @@
 //     return ob;
 // })
 
-const p3 = (s, f) => f(s);
+const p3 = (str, func) => func(str);
 
-const expr1 = p3('supercalifragilisticexpialidocious', s=>{
-  return s.replace(/c/g,'*c').split('*')
+const expr1 = p3('supercalifragilisticexpialidocious', str=>{
+  return str.replace(/c/g,'*c').split('*')
 })
 
-const expr2 = p3('supercalifragilisticexpialidocious', s=>{
+const expr2 = p3('supercalifragilisticexpialidocious', str=>{
     return {
-        originalString: s,
-        modifiedString: s.replace(/a/g,'A'),
-        numberReplaced: s.split('a').length -1,
-        length: s.length
+        originalString: str,
+        modifiedString: str.replace(/a/g,'A'),
+        numberReplaced: str.split('a').length -1,
+        length: str.length
     }
 })
 
